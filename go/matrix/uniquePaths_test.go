@@ -4,7 +4,7 @@ import (
 	"testing"
 )
 
-func TestDfs(t *testing.T) {
+func TestUniquePaths(t *testing.T) {
 	tests := []struct {
 		name string
 		grid [][]uint8
@@ -23,7 +23,7 @@ func TestDfs(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if have := Dfs(tt.grid); have != tt.want {
+			if have := uniquePaths(tt.grid); have != tt.want {
 				t.Errorf("wrong output\nhave: %v \nwant: %v", have, tt.want)
 			}
 		})
